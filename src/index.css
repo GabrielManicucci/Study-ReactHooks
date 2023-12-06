@@ -11,6 +11,8 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 a {
@@ -23,11 +25,18 @@ a:hover {
 }
 
 body {
-  margin: 0;
+  margin: 0 auto;
+  padding: 0;
   display: flex;
   place-items: center;
+  width: 100vw;
+  height: 100vh;
   min-width: 320px;
   min-height: 100vh;
+}
+
+.rootContainer {
+  display: flex;
 }
 
 h1 {
@@ -47,7 +56,7 @@ button {
   transition: border-color 0.25s;
 }
 button:hover {
-  border-color: #646cff;
+  background-color: #7f31e4;
 }
 button:focus,
 button:focus-visible {

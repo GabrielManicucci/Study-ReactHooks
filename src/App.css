@@ -1,10 +1,18 @@
 #root {
-  max-width: 1280px;
+  /* max-width: 1280px; */
+  display: flex;
+  flex-direction: column;
+
   margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  height: 100%;
+  width: 100%;
 }
 
-.card {
-  padding: 2em;
+.app {
+  display: flex;
+  padding: 30px 43px;
 }
+
+/* .card button:hover {
+  background-color: rgb(123, 23, 216)
+} */
