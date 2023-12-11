@@ -10,7 +10,12 @@
 
 .app {
   display: flex;
-  padding: 30px 43px;
+  width: 100%;
+}
+
+.contents {
+  padding: 30px 50px;
+  width: 100%;
 }
 
 /* .card button:hover {

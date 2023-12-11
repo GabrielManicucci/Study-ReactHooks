@@ -15,11 +15,11 @@ nav div {
 }
 
 a {
-  padding: 6px;
+  padding: 7px;
   border-radius: 5px;
   margin-bottom: 6px;
 }
 
 a:hover {
-  background-color: #646cff46;
+  background-color: #52525257;
 }

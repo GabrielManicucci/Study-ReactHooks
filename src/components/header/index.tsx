@@ -7,7 +7,7 @@ export default function Header() {
         <h1>React Hooks Doc</h1>
 
         <div className="info">
-          <button>togle</button>
+          <button>Toggle</button>
           <input type="text" placeholder="Search" />
         </div>
       </div>

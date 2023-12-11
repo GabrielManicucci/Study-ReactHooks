@@ -37,7 +37,7 @@ function UseReducerComponent() {
   return (
     <div className="useReducer">
       <div className="Wrapper">
-        <h2>React Hooks Study</h2>
+        <h2>Use Reducer React Hook</h2>
 
         <div className="card">
           <input
