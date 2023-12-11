@@ -1,5 +1,4 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom"
-import UseReducerComponent from "./components/useReducer/index.tsx"
 import App from "./App.tsx"
 import UseStateComponent from "./components/useState/index.tsx"
 import UseEffectComponent from "./components/useEffect/index.tsx"
@@ -8,6 +7,7 @@ import UseRefComponent from "./components/useRef/index.tsx"
 import UseMemoComponent from "./components/useMemo/index.tsx"
 import UseCallbackComponent from "./components/useCallback/index.tsx"
 import UseLayoutEffectComponent from "./components/useLayoutEffect/index.tsx"
+import UseReducerComponent from "./components/useReducer/index.tsx"
 
 export default function RoutesComponent() {
   return (
