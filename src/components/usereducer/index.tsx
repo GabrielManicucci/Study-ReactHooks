@@ -32,7 +32,7 @@ function reducer(state: state, action: action) {
   throw Error("Unknown action: " + action.type)
 }
 
-export default function UseReducerComponent() {
+export default function ComponentUseReducer() {
   const [state, dispatch] = useReducer(reducer, { nextName: "teste", age: 0 })
   return (
     <div className="useReducer">

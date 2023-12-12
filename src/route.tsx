@@ -7,7 +7,7 @@ import UseRefComponent from "./components/useRef/index.tsx"
 import UseMemoComponent from "./components/useMemo/index.tsx"
 import UseCallbackComponent from "./components/useCallback/index.tsx"
 import UseLayoutEffectComponent from "./components/useLayoutEffect/index.tsx"
-import UseReducerComponent from "./components/useReducer/index.tsx"
+import ComponentUseReducer from "./components/usereducer/index.tsx"
 
 export default function RoutesComponent() {
   return (
@@ -16,7 +16,7 @@ export default function RoutesComponent() {
         <Routes>
           <Route path="/" Component={App}>
             <Route path="/useState" Component={UseStateComponent} />
-            <Route path="/useReducer" Component={UseReducerComponent} />
+            <Route path="/useReducer" Component={ComponentUseReducer} />
             <Route path="/useEffect" Component={UseEffectComponent} />
             <Route path="/useCallback" Component={UseCallbackComponent} />
             <Route path="/useRef" Component={UseRefComponent} />
