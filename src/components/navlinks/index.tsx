@@ -66,7 +66,8 @@ export default function NavLinks({ pathName }: PathName) {
       "/useEffect",
       "/useCallback",
       "/useMemo",
-      "/useContext"
+      "/useContext",
+      "/useLayoutEffect"
     ]
 
     const result = () => {

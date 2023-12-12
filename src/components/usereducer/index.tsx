@@ -1,17 +1,11 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { useReducer } from "react"
 import "./styles.css"
 
-type ActionObject = {
-  type: string
-  nextName?: string
-}
-
-type StateObject = {
-  age: number
-  nextName: string | undefined
-}
-
-function reducer(state: StateObject, action: ActionObject) {
+function reducer(
+  state: { age: number; nextName?: any },
+  action: { type: string; nextName?: any }
+) {
   switch (action.type) {
     case "incremented_age":
       return {
