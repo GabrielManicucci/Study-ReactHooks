@@ -1,11 +1,10 @@
 import { ReactNode } from "react"
-import "./styles.css"
 import { Link } from "react-router-dom"
 
 interface props {
   children: ReactNode
   onClickProp: () => void
-  hover: string
+  hover: object
   hrefProp: string
 }
 
@@ -17,8 +16,9 @@ export default function LinkRoute({
 }: props) {
   return (
     <Link
+      className="p-2 rounded-md mb-2 hover:bg-[#2e2e2e] transition-all font-medium text-[#605dff8a] hover:text-[#5f5dff]"
       onClick={onClickProp}
-      style={{ backgroundColor: hover }}
+      style={hover}
       to={hrefProp}
     >
       {children}

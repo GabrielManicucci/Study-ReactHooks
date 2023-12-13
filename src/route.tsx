@@ -11,7 +11,7 @@ import ComponentUseReducer from "./components/usereducer/index.tsx"
 
 export default function RoutesComponent() {
   return (
-    <div className="rootContainer">
+    <div className="">
       <BrowserRouter>
         <Routes>
           <Route path="/" Component={App}>

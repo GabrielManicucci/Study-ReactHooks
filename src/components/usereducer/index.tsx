@@ -1,5 +1,4 @@
 import { useReducer } from "react"
-import "./styles.css"
 
 type state = {
   nextName?: string
@@ -35,12 +34,13 @@ function reducer(state: state, action: action) {
 export default function ComponentUseReducer() {
   const [state, dispatch] = useReducer(reducer, { nextName: "teste", age: 0 })
   return (
-    <div className="useReducer">
-      <div className="Wrapper">
-        <h2>Use Reducer React Hook</h2>
+    <div className="">
+      <div className="">
+        <h2 className="text-3xl font-semibold">Use Reducer React Hook</h2>
 
-        <div className="card">
+        <div className="mt-10">
           <input
+            className="px-5 py-3 rounded-md"
             type="text"
             name=""
             id=""
@@ -50,14 +50,29 @@ export default function ComponentUseReducer() {
             }}
           />
 
-          <p>
-            Hello <span>{state.nextName}</span> You are {state?.age}
+          <p className="my-3">
+            Hello{" "}
+            <span className="text-[#6764ff] font-bold text-xl">
+              {state.nextName}
+            </span>{" "}
+            You are{" "}
+            <span className="text-[#6764ff] text-xl font-semibold">
+              {state?.age}
+            </span>
           </p>
 
-          <button onClick={() => dispatch({ type: "incremented_age" })}>
+          <button
+            className="py-3 mr-5 px-5  rounded-lg bg-[#131313] hover:bg-[#6764ff] transition-all"
+            onClick={() => dispatch({ type: "incremented_age" })}
+          >
             add
           </button>
-          <button onClick={() => dispatch({ type: "false" })}>reduce</button>
+          <button
+            className="py-3 mr-5 px-5  rounded-lg bg-[#131313] hover:bg-[#6764ff] transition-all"
+            onClick={() => dispatch({ type: "false" })}
+          >
+            reduce
+          </button>
         </div>
       </div>
     </div>

@@ -1,5 +1,4 @@
 import LinkRoute from "./links"
-import "./styles.css"
 import { useEffect, useState } from "react"
 
 interface PathName {
@@ -76,21 +75,22 @@ export default function NavLinks({ pathName }: PathName) {
       return route
     }
 
-    if (pathName === result()) {
-      setValue(pathName)
-      console.log("Function working:", value)
-    }
+    if (pathName === result()) setValue(pathName)
   }
 
   useEffect(myStyle)
 
   return (
-    <nav>
-      <div>
+    <nav className="h-screen border-r border-r-zinc-500 left-0 min-w-[256px]">
+      <div className="flex flex-col pt-5 pr-4 pl-7">
         {linksArray.map(linkArray => (
           <LinkRoute
             onClickProp={myStyle}
-            hover={value === linkArray.href ? "#6764ff57" : ""}
+            hover={
+              value === linkArray.href
+                ? { backgroundColor: "#605dff31", color: "#5f5dff" }
+                : {}
+            }
             hrefProp={linkArray.href}
             key={linkArray.id}
           >
