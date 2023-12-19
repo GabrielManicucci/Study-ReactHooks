@@ -25,17 +25,17 @@ export default function Header() {
     return () => subscription.unsubscribe()
   }, [])
 
-  const getURL = () => {
-    let url =
-      import.meta.env.VITE_VERCEL_ENV ?? // Set this to your site URL in production env.
-      import.meta.env.VITE_VERCEL_URL ?? // Automatically set by Vercel.
-      "http://localhost:3000/"
-    // Make sure to include `https://` when not localhost.
-    url = url.includes("http") ? url : `https://${url}`
-    // Make sure to include a trailing `/`.
-    url = url.charAt(url.length - 1) === "/" ? url : `${url}/`
-    return url
-  }
+  // const getURL = () => {
+  //   let url =
+  //     import.meta.env.VITE_VERCEL_ENV ?? // Set this to your site URL in production env.
+  //     import.meta.env.VITE_VERCEL_URL ?? // Automatically set by Vercel.
+  //     "http://localhost:3000/"
+  //   // Make sure to include `https://` when not localhost.
+  //   url = url.includes("http") ? url : `https://${url}`
+  //   // Make sure to include a trailing `/`.
+  //   url = url.charAt(url.length - 1) === "/" ? url : `${url}/`
+  //   return url
+  // }
 
   return (
     <header className="w-full py-3 border-b border-b-zinc-500">
@@ -69,10 +69,7 @@ export default function Header() {
               className="bg-transparent p-3 hover:bg-[#6764ff] rounded-md transition-all"
               onClick={async () => {
                 supabase.auth.signInWithOAuth({
-                  provider: "github",
-                  options: {
-                    redirectTo: getURL()
-                  }
+                  provider: "github"
                 })
               }}
             >
