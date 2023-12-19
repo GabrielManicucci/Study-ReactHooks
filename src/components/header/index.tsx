@@ -34,6 +34,8 @@ export default function Header() {
   //   url = url.includes("http") ? url : `https://${url}`
   //   // Make sure to include a trailing `/`.
   //   url = url.charAt(url.length - 1) === "/" ? url : `${url}/`
+
+  //   console.log(url)
   //   return url
   // }
 
@@ -69,7 +71,10 @@ export default function Header() {
               className="bg-transparent p-3 hover:bg-[#6764ff] rounded-md transition-all"
               onClick={async () => {
                 supabase.auth.signInWithOAuth({
-                  provider: "github"
+                  provider: "github",
+                  options: {
+                    redirectTo: window.location.origin
+                  }
                 })
               }}
             >
