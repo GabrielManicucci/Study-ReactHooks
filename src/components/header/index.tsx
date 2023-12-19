@@ -25,6 +25,18 @@ export default function Header() {
     return () => subscription.unsubscribe()
   }, [])
 
+  const getURL = () => {
+    let url =
+      import.meta.env.VITE_VERCEL_ENV ?? // Set this to your site URL in production env.
+      import.meta.env.VITE_VERCEL_URL ?? // Automatically set by Vercel.
+      "http://localhost:3000/"
+    // Make sure to include `https://` when not localhost.
+    url = url.includes("http") ? url : `https://${url}`
+    // Make sure to include a trailing `/`.
+    url = url.charAt(url.length - 1) === "/" ? url : `${url}/`
+    return url
+  }
+
   return (
     <header className="w-full py-3 border-b border-b-zinc-500">
       <div className="flex justify-between items-center py-5 px-7">
@@ -59,7 +71,7 @@ export default function Header() {
                 supabase.auth.signInWithOAuth({
                   provider: "github",
                   options: {
-                    redirectTo: window.location.origin
+                    redirectTo: getURL()
                   }
                 })
               }}
